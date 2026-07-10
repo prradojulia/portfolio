@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Portfólio - Julia Prado</title>
+</head>
+<body>
+    <header>
+        <nav>
+              <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+  </div>
+            <ul id="menu">
+              <li class="inicio">
+                <a href="#inicio" class="nav-link">Início</a>
+              </li>
+              <li>
+                <a href="#sobre" class="nav-link">Sobre Mim</a>
+              </li>
+
+              <li>
+                <a href="#formacao" class="nav-link">Formação</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+              </li>
+              <li>
+                <a href="#contato" class="nav-link">Contato</a>
+              </li>
+            </ul>
+
+        </nav>
+    </header>
+<section id="inicio" class="section">
+    <div class="inicio-texto">
+    <h1>Olá,</h1>
+    <h1>Eu sou <span>Julia Prado</span></h1>
+    <h2>Desenvolvedora em formação</h2>
+
+    <div class="acoes-inicio">
+
+    <a href="docs/CV-JULIAPRADO.pdf"
+    target="_blank"
+    download
+    class="botao-cv">
+
+    <span>Download CV</span>
+    <i class="fa-solid fa-download"></i>
+
+
+    </a>
+    <a href="https://www.linkedin.com/in/juliaprlima/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-icon">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/prradojulia"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-icon">
+        <i class="fab fa-github"></i>
+    </a>
+
+</div>
+    </div>
+
+    <div class="inicio-imagem">
+        <img src="img/foto-julia.jpeg" alt="Foto de Julia Prado">
+    </div>
+</section>
+<section id="sobre" class="section">
+    <div class="sobre-conteudo">
+
+        <h2>Sobre Mim</h2>
+
+        <p>
+            Sou estudante de Engenharia de Software, com previsão de conclusão em 2029,
+            e apaixonada por tecnologia. Atuo há três anos como suporte técnico N2,
+            onde desenvolvi habilidades de troubleshooting em ambientes de nuvem utilizando
+            GCP e AWS. Além disso, adquiri experiência com bancos de dados SQL e no
+            desenvolvimento de integrações entre sistemas utilizando Python e Node.js.
+        </p>
+
+        <p>
+            Tenho grande interesse tanto pelo desenvolvimento <strong>Front-End</strong>
+            quanto pelo <strong>Back-End</strong> e, por isso, estou criando este portfólio
+            para compartilhar minha trajetória e apresentar meus projetos. Meu objetivo é
+            unir minha experiência em infraestrutura, suporte e desenvolvimento para
+            construir aplicações modernas, funcionais e com uma excelente experiência para
+            o usuário.
+        </p>
+
+    </div>
+</section>
+<section id="formacao" class="section">
+  <h2>Formação</h2>
+
+    <div class="timeline">
+
+  <!-- Graduação -->
+  <div class="timeline-item">
+    <i class="fa-solid fa-graduation-cap"></i>
+
+    <div class="formacao-conteudo">
+      <h3>Graduação</h3>
+      <h4>Engenharia de Software</h4>
+      <p class="instituicao">Centro Universitário Internacional – Uninter</p>
+      <p class="previsao"><strong>Previsão:</strong> 2029</p>
+    </div>
+  </div>
+
+  <!-- Formação complementar -->
+  <div class="timeline-item">
+    <i class="fa-solid fa-laptop-code"></i>
+
+    <div class="formacao-conteudo">
+      <h3>Formação Complementar</h3>
+
+      <p class="stack">
+        Desenvolvimento Web • React • TypeScript • Python • SQL • Postman
+      </p>
+    </div>
+  </div>
+
+  <!-- Idiomas -->
+  <div class="timeline-item">
+    <i class="fa-solid fa-language"></i>
+
+    <div class="formacao-conteudo">
+      <h3>Idiomas</h3>
+
+      <p class="stack">
+        Português — Nativo<br>
+        Inglês — Intermediário
+      </p>
+    </div>
+  </div>
+
+</div>
+</section>
+<section id="portfolio" class="section">
+        <h2>Portfólio</h2>
+         <div class="portfolio-card">
+
+        <i class="fa-solid fa-code"></i>
+
+        <h3>Projetos em desenvolvimento</h3>
+
+        <p>
+            Em breve você encontrará aqui projetos desenvolvidos ao longo da minha formação em Engenharia de Software, aplicando os conhecimentos adquiridos em diferentes tecnologias.
+        </p>
+
+    </div>
+</section>
+<section id="contato" class="section">    <h2>Contato</h2>
+    <form id="contato-form">
+      <div class="campo">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="nome" name="nome" required placeholder="Informe seu nome">
+      </div>
+
+      <div class="campo">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="email" name="email" required placeholder="exemplo@gmail.com">
+      </div>
+
+      <div class="campo">
+        <i class="fa-solid fa-comment-dots"></i>
+        <textarea id="mensagem" name="mensagem" required placeholder="Digite aqui sua mensagem"></textarea>
+      </div>
+
+      <button type="submit" aria-label="Enviar formulário de contato">
+        <i class="fa-solid fa-paper-plane"></i> Enviar
+      </button>
+    </form>
+  </section>
+    <footer>
+        <p>© 2026 Julia Prado • Desenvolvido com HTML, CSS e JavaScript</p>
+
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
