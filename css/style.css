@@ -26,7 +26,7 @@ html {
 
 :root {
     /* Layout */
-    --nav-height: 80px;
+    --nav-height: 90px;
 
     /* Cores principais */
     --azul: #38BDF8;
@@ -795,15 +795,10 @@ footer p {
 
     /* Seções no mobile */
   .section {
-    min-height: calc(100svh - var(--nav-height)); /* corrige para iPhone */
-    padding: 35px 25px;
     scroll-margin-top: var(--nav-height);
+    padding-top: calc(var(--nav-height) + 10px);
+    min-height: calc(100svh - var(--nav-height));
   }
-
-  #sobre, #formacao, #portfolio, #contato {
-    margin-top: var(--nav-height); /* empurra abaixo da navbar */
-  }
-}
 
     /* Hero (Início) */
     #inicio {
