@@ -26,7 +26,7 @@ html {
 
 :root {
     /* Layout */
-    --nav-height: 90px;
+    --nav-height: 70px;
 
     /* Cores principais */
     --azul: #38BDF8;
@@ -891,7 +891,7 @@ section {
 
   width: 100%;
   min-height: 100vh; 
-  padding: 60px 20px 80px; 
+  padding: 40px 20px 80px; 
   box-sizing: border-box;
 }
 
@@ -907,12 +907,14 @@ section {
     text-align: center;
 
     gap: 8px;
-    padding-top: calc(var(--nav-height) + 10px);
+    padding: calc(var(--nav-height) + 10px) 20px 40px;
 }
 
 .inicio-imagem {
     order: -1;
     margin-bottom: -25px;
+    margin-bottom: -20px;
+
 }
 
   .inicio-imagem img {
@@ -921,7 +923,12 @@ section {
     box-shadow: 0 0 15px rgba(56,189,248,0.3);
   }
 
+  .inicio-texto {
+    margin-top: -10px;
+}
+
   .inicio-texto h1 {
+     margin-bottom: 5px;
     font-size: 2.2rem;
     margin-top: 0;
   }
