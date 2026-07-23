@@ -94,7 +94,7 @@ body {
    ANIMAÇÕES
 =================================================== */
 
-@keyframes fadeIn {
+@keyframes fadeDown {
     from {
         opacity: 0;
         transform: translateY(-10px);
@@ -106,7 +106,7 @@ body {
     }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeLeft {
     from {
         opacity: 0;
         transform: translateX(-30px);
@@ -115,6 +115,28 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        box-shadow: 0 0 5px #38BDF8;
+    }
+
+    50% {
+        box-shadow: 0 0 18px #38BDF8;
     }
 }
 
@@ -222,7 +244,8 @@ nav a:focus-visible {
  /* ===================================================
    COMPONENTES
 =================================================== */
-
+ 
+/*Botão início */
 .botao-cv {
     display: inline-flex;
     align-items: center;
@@ -307,26 +330,70 @@ nav a:focus-visible {
   border-color: var(--azul); 
 }
 
+/* Botão Contato*/
+#contato-form button {
+    background: var(--gradiente-botao);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 45px;
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all .3s ease;
+}
+
+#contato-form button i {
+    font-size: 1.3rem;
+    transition: transform .4s ease;
+}
+
+#contato-form button:hover {
+    transform: translateY(-3px);
+  }
+
+#contato-form button:hover i {
+    transform: rotate(20deg);
+}
+
+
 /* ===================================================
    SEÇÃO INÍCIO
 =================================================== */
 
 #inicio {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+
+    gap: clamp(100px, 12vw, 200px);
+
     flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .inicio-texto {
-    flex: 1;
+    flex: 0 1 550px;
     min-width: 280px;
+    animation: fadeUp 5s ease forwards;
+
 }
 
 .inicio-imagem {
+    flex: 0 1 420px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeUp 5s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
 }
 
 .inicio-texto h1,
@@ -338,6 +405,7 @@ nav a:focus-visible {
 
 .inicio-texto h1 {
     font-size: 4rem;
+    white-space: nowrap;
 }
 
 .inicio-texto h1 span {
@@ -375,8 +443,26 @@ aspect-ratio: 1;
 height: auto;
 border-radius: 50%;
 object-fit: cover;
+border: 1.5px solid var(--azul);
+box-shadow: 0 0 15px rgba(56,189,248,0.3);
 
 }
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status span {
+    width: 9px;
+    height: 9px;
+    background: #38BDF8;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-dot 1.8s infinite;
+}
+
 
 /* =====================================================
    SEÇÃO SOBRE
@@ -530,6 +616,7 @@ object-fit: cover;
         text-align: center;
     }
 }
+
 /* =====================================================
    SEÇÃO PORTFÓLIO
 ===================================================== */
@@ -620,6 +707,30 @@ object-fit: cover;
     border-radius: 2px;
 }
 
+#contato-form {
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 12px;
+    padding: 30px;
+    background: transparent;
+}
+
+.contato-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+
+.contato-intro h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contato-intro p {
+    color: #94A3B8;
+    line-height: 1.6;
+}
+
+
 /* Formulário */
 
 #contato-form {
@@ -670,35 +781,6 @@ object-fit: cover;
     resize: none;
 }
 
-/* Botão */
-#contato-form button {
-    background: var(--gradiente-botao);
-    border: none;
-    border-radius: 50px;
-    padding: 15px 45px;
-    color: var(--branco);
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all .3s ease;
-}
-
-#contato-form button i {
-    font-size: 1.3rem;
-    transition: transform .4s ease;
-}
-
-#contato-form button:hover {
-    transform: translateY(-3px);
-  }
-
-#contato-form button:hover i {
-    transform: rotate(20deg);
-}
-
 /* Mensagens de status */
 #contato-form div {
     margin-top: 15px;
@@ -720,6 +802,7 @@ object-fit: cover;
     color: var(--erro);
     border: 1px solid var(--erro);
 }
+
 
 /* =====================================================
    FOOTER
@@ -799,7 +882,7 @@ footer p {
     }
 
     /* Seções no mobile */
-.section {
+section {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -807,28 +890,30 @@ footer p {
   align-items: center;
 
   width: 100%;
-  min-height: 100vh; /* força cada seção a ocupar a tela inteira */
-  padding: 60px 20px 80px; /* espaço interno confortável */
+  min-height: 100vh; 
+  padding: 60px 20px 80px; 
   box-sizing: border-box;
 }
 
 .section + .section {
-  margin-top: 0; /* remove espaçamento extra entre seções */
+  margin-top: 0; 
 }
 
     /* Hero (Início) */
-  #inicio {
-    flex-direction: column; /* mantém a foto em cima */
+#inicio {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
-    gap: 25px;
-    padding-top: calc(var(--nav-height) + 20px);
-  }
 
-  .inicio-imagem {
-    order: -1; /* garante que a imagem fique antes do texto */
-  }
+    gap: 8px;
+    padding-top: calc(var(--nav-height) + 10px);
+}
+
+.inicio-imagem {
+    order: -1;
+    margin-bottom: -25px;
+}
 
   .inicio-imagem img {
     width: 220px;
@@ -838,7 +923,7 @@ footer p {
 
   .inicio-texto h1 {
     font-size: 2.2rem;
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .inicio-texto h2 {
