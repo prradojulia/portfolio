@@ -1,3 +1,4 @@
+
 /* ===================================================
    TABLET
 =================================================== */
@@ -8,9 +9,10 @@
         overflow-x: hidden;
     }
     
-     #menu {
+    #menu {
         display: none;
     }
+
 
         #menu.active {
         display: flex;
@@ -99,36 +101,52 @@
         text-align: center;
     }
 
+
 }
+
+
 /* ===================================================
    CELULAR
 =================================================== */
 
-@media screen and (max-width:768px){
+@media screen and (max-width:600px){
+
+    .saudacao {
+        font-weight: 650;
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
     
     .sobre-conteudo{
          width: 85%;
         text-align: center;
         justify-content: center;
     }
+
+    #sobre .sobre-conteudo h2,
+    #tecnologias h2,
+    #portfolio h2 {
+        font-size: 1.4rem;
+    }
+
+    #portfolio h3{
+        font-size: 1.2rem;
+    }
+
     .tecnologias {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        width: 100%;
+        grid-template-columns: repeat(2, 140px);
+        justify-content: center;
+        gap: 8px;
     }
 
     .tech-card {
-        width: 100%;
-        max-width: 150px;
+        width: 140px;
+        height: 130px;
         min-width: 0;
         min-height: 0;
-        height: 130px;
         padding: 12px 6px;
-        border-radius: 12px;
-        justify-self: center;
-}
-
+    }   
     .tech-card h3 {
         font-size: 0.75rem;
         margin-bottom: 10px;
@@ -137,8 +155,8 @@
     .tecnologias .tech-card:last-child {
     grid-column: 1 / -1;
     justify-self: center;
-    width: calc((100% - 12px) / 2);
-}
+    width: 140px;
+    }
 
     .tech-icons {
         display: grid;
