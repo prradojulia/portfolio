@@ -1,0 +1,178 @@
+/* ===================================================
+   TABLET
+=================================================== */
+
+@media screen and (max-width:1024px){
+
+    body {
+        overflow-x: hidden;
+    }
+    
+     #menu {
+        display: none;
+    }
+
+        #menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        gap: 20px;
+        background: var(--bg-menu);
+        align-items: center;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 100vw;
+        justify-content: flex-start;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+    
+    .section {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
+
+    #inicio {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        padding-top: calc(var(--nav-height) + 20px);
+    }
+
+
+    .inicio-texto {
+        order: 1;
+        width: 100%;
+
+    }
+
+    .inicio-imagem {
+        order: -1;
+        flex: none;
+        width: 100%;
+    }
+
+    .inicio-imagem img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .inicio-imagem::before {
+        width: 80vw;
+        height: 80vw;
+        filter: blur(40px);
+    }
+    
+    .saudacao {
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+
+    .status {
+        font-size: 1.1rem;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .acoes-inicio {
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+/* ===================================================
+   CELULAR
+=================================================== */
+
+@media screen and (max-width:768px){
+    
+    .sobre-conteudo{
+         width: 85%;
+        text-align: center;
+        justify-content: center;
+    }
+    .tecnologias {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 100%;
+    }
+
+    .tech-card {
+        width: 100%;
+        max-width: 150px;
+        min-width: 0;
+        min-height: 0;
+        height: 130px;
+        padding: 12px 6px;
+        border-radius: 12px;
+        justify-self: center;
+}
+
+    .tech-card h3 {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+    }
+
+    .tecnologias .tech-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 12px) / 2);
+}
+
+    .tech-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .tech-item {
+        gap: 4px;
+    }
+
+    .tech-item i {
+        font-size: 1.6rem;
+    }
+
+    .tech-item span {
+        font-size: 0.65rem;
+    }
+
+    .portfolio-card {
+        width: 90%;
+        max-width: 350px;
+        padding: 30px 20px;
+    }
+
+    .contato-intro h2{
+        font-size: 2.5rem;
+    }
+
+    .contato-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
